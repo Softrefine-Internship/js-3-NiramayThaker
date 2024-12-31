@@ -32,3 +32,31 @@
 //     { id: 4, name: 'Hank', department: 'IT' }
 // ]
 
+let arr = [
+    {
+        id: 1,
+        name: "John",
+        department: "HR",
+    },
+    {
+        id: 2,
+        name: "Alice",
+        department: "IT",
+    },
+    {
+        id: 3,
+        name: "Bob",
+        department: "Finance",
+    },
+    {
+        id: 4,
+        name: "Hank",
+        department: "IT",
+    },
+]
+
+const filterElement = (arr, val) => {
+    return arr.filter((ele) => ele.department === val);
+}
+
+console.log(filterElement(arr, 'IT'));

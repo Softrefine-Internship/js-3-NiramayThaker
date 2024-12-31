@@ -1,13 +1,13 @@
-// Write a JavaScript program to check a given string is an anagram of another string.
+let str1 = "eleven plus two";
+let str2 = "twelve plus one";
 
-// Example 1:
-// Input: evil = vile
-// Output: true
 
-// Example 2:
-// Input: a gentleman = elegant man
-// Output: true
+const splitStr = (s) => {
+    return s.replace(/\s+/g, '').split('').sort().join('');
+}
 
-// Example 3:
-// Input: eleven plus two = twelve plus one
-// Output: true
+const checkAnagram = (s1, s2) => {
+    return splitStr(s1) === splitStr(s2);
+}
+
+console.log(checkAnagram(str1, str2)); 
